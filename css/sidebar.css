@@ -143,8 +143,11 @@
     display: hidden;
     border-style: hidden;
   }
+}
 
-
+.expand{
+  & .sidebar-container{
+    width: 20%;
 }
 
 
@@ -172,8 +175,18 @@
     position: fixed;
     height: 100%;
   }
- 
 }
+
+@media (max-width: 1399px ){
+  .sidebar-container{
+    width: 18.75rem ;
+  }
+  .profile-image-container{
+    margin-left: 2rem;
+    
+  }
+}
+
 
 @media (max-width: 1399px ){
   .sidebar-container{
