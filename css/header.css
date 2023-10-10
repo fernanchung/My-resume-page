@@ -1,0 +1,194 @@
+.header-container{
+  z-index: 99999999;
+  display: grid;
+  font-family: regular;
+  grid-template-columns: 0.3fr 2fr 0.3fr;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 40px;
+  padding-top: 17.8px;
+  box-shadow: 0px 1px 3px rgb(173, 171, 171);
+  width: 100%;
+  
+  & h1{
+   font-size: 50px;
+   margin-top: 11.7px;
+   margin-bottom: 2px; 
+  }
+  & p{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;;
+  }
+  & a{
+    font-size: 20px;
+  }
+}
+
+.skip-button-container{
+  margin: 0;
+  left: -35px;
+  bottom: -10px;
+  position: relative;
+}
+
+.skip-button{
+  border:none;
+  border-radius: 7px;
+  padding: 17px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  background:linear-gradient(to right,rgb(15, 94, 114), rgb(21, 46, 46));
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.skip-button-container:hover{
+  transform: scale(1.02);
+}
+
+.head-tool-tip{
+  position: absolute;
+  background: rgb(100, 99, 99);
+  width: 8.8rem;
+  padding: 3px 5px;
+  left: 2.1rem;
+  bottom: -3rem;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity .45s;
+  pointer-events: none;
+}
+
+.skip-button-container:hover .head-tool-tip{
+  opacity: .75;
+}
+
+.empty-header-space{
+  width:auto;
+}
+
+.link{
+  transition: color .5s;
+  font-weight: bold;
+}
+
+.link:hover{
+  background: linear-gradient(to right, rgb(46, 212, 238), rgb(180, 235, 53)); /* Define the linear gradient */
+  -webkit-background-clip: text; /* Set the background clip to text for webkit browsers */
+  background-clip: text; /* Set the background clip to text for non-webkit browsers */
+  color: transparent; /* Make the text transparent to reveal the gradient */
+  text-decoration: underline  rgb(0, 255, 21);
+}
+
+/* phone and screen scale size */
+@media (max-width: 3000px ){
+  .head-tool-tip{
+    left: 6rem;
+  }
+}
+
+@media (max-width: 2800px ){
+  .head-tool-tip{
+    left: 5.5rem;
+  }
+}
+
+@media (max-width: 2642px ){
+  .head-tool-tip{
+    left: 4.7rem;
+  }
+}
+
+@media (max-width: 2376px ){
+  .head-tool-tip{
+    left: 3.8rem;
+  }
+}
+
+@media (max-width: 2074px ){
+  .head-tool-tip{
+    left: 2.9rem;
+  }
+}
+
+@media (max-width: 1879px ){
+  .head-tool-tip{
+    left: 1.8rem;
+  }
+}
+
+@media (max-width: 1537px ){
+  .head-tool-tip{
+    left: .2rem;
+  }
+}
+
+@media (max-width: 1441px ){
+  .head-tool-tip{
+    left: .2rem;
+  }
+}
+
+
+@media (max-width: 1161px ){
+  .head-tool-tip{
+    left: -.8rem;
+  }
+}
+
+@media (max-width: 965px ){
+  .head-tool-tip{
+    left: -1.5rem;
+  }
+}
+
+@media (max-width: 850px ){
+  .head-tool-tip{
+    left: -2.5rem;
+    font-size: medium;
+    padding: 3px 4px;
+  } .skip-button{
+    font-size: 16px;
+    padding: 20px 12px;
+  }
+}
+
+@media (max-width: 712px ){
+  .head-tool-tip{
+    left: -2.9rem;
+    font-size: medium;
+    padding: 3px 0px;
+  }
+  .skip-button-container{
+    top: -.5rem;
+  }
+}
+
+@media (max-width: 588px ){
+  .head-tool-tip{
+    left: -3.2rem;
+    font-size: medium;
+    padding: 3px 0px;
+  }
+  .skip-button-container{
+    top: 5rem;
+  }
+}
+
+@media (max-width: 432px ){
+  .head-tool-tip{
+    left: -5rem;
+    font-size: small;
+    padding: 3px 0px;
+  }
+  .skip-button-container{
+    top: .7rem;
+    left: -.8rem
+  }
+}

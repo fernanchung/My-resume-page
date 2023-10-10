@@ -1,0 +1,182 @@
+:root{
+  --font-color:  rgb(87, 86, 86);
+  --coverTextBG: rgb(255, 255, 255);
+  --leftBorderColor: rgb(123, 123, 128);
+  --typespeed: 2.5s;
+  --blinkspeed: 0.88s;
+}
+
+
+.main-container{
+  z-index: 100; 
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  width:auto;
+  font-family: regular;
+  font-weight: normal;
+  color: var(--font-color);
+}
+
+.initial-container{
+  position: relative;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.initial{
+  display:inline-block;
+  
+}
+
+.first{
+  font-size: 180px;
+  font-weight: 600;
+  animation: flashFade 3s forwards;
+  margin-bottom: 0px;
+}
+
+/* words fading HI */
+@keyframes flashFade{
+  0% {
+    opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* fadecode for upward*/
+/*
+.ClassName
+transform: translateY(3rem);
+animation: fadeInUP 2s ease (here is the delay time) calc(var(--typespeed)+2s)  forwards;
+
+@keyframes fadeInUp{
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/
+
+.initial2{
+  display: hidden;
+  font-size: 45px;
+  margin-top: 10rem;
+  width: auto;
+}
+
+.second{
+  position:relative;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  width: auto;
+  text-align: center;
+  animation: fadeaway 3s ease-in-out forwards; 
+  animation-delay: 9s;
+  transition: step-start;
+}
+
+@keyframes fadeaway {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .3;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.actual-content{
+  display: none;
+  grid-template-columns: 1fr 1.3fr 0.7fr ;
+  animation: fadeInUp 3s forwards, moveUp 3s forwards;
+}
+
+.resume-content p{
+  font-size: 18px;
+  color:  rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+.resume-content h3{
+  font-size: 28px;
+  color:  rgb(0, 0, 0);
+}
+
+.resume-content h4{
+  font-size: 22px;
+  color:  rgb(0, 0, 0);
+}
+
+.empty-left{
+  z-index: 10;
+}
+
+.empty-right{
+  z-index: 10;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    
+  }to{
+    opacity: 1;
+    
+  }
+}
+
+@keyframes moveUp {
+  to {
+    right: 0;
+  }
+}
+
+
+@media (max-width: 1526px ){
+  .actual-content{
+    grid-template-columns: 0.8fr 1.3fr 0.4fr ;
+  }
+}
+
+@media (max-width: 957px ){
+  .actual-content{
+    grid-template-columns: 0.4fr 1.3fr 0.3fr ;
+  }
+}
+
+@media (max-width: 957px ){
+  .actual-content{
+    grid-template-columns: 0.4fr 1.3fr 0.3fr ;
+  }
+}
+
+@media (max-width: 510px){
+  .second-box{
+    display: flex;
+    align-items: center;
+    
+    }
+    .second{
+      text-align: center;
+    }
+}
